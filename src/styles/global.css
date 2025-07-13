@@ -5,6 +5,7 @@
     --color-pt-white-g: #e8dfec;
     --color-pt-black-g: #302e4d;
     --color-pt-red-primary: #ec1839;
+    --color-pt-gray-primary: #7d7d7d;
 }
 
 @layer components{
