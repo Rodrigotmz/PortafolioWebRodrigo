@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme{
+    --color-pt-white: #fdf9ff;
+    --color-pt-white-g: #e8dfec;
+    --color-pt-black-g: #302e4d;
+    --color-pt-red-primary: #ec1839;
+}
+
+@layer components{
+    .logo-before{
+        @apply before:content-[''] before:w-5 before:h-5 before:border-t-4 before:border-l-4 before:border-solid before:border-pt-red-primary before:absolute before:left-0 before:top-0;
+    }
+    .logo-after{
+        @apply after:content-[''] after:w-5 after:h-5 after:border-b-4 after:border-r-4 after:border-solid after:border-pt-red-primary after:absolute after:right-0 after:bottom-0;
+    }
+}

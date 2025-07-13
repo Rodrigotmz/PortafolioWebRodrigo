@@ -1,0 +1,64 @@
+---
+
+---
+
+<div class="nav-toggler">
+  <span></span>
+</div>
+
+<style>
+  .aside .nav-toggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid #d4d4e3;
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    z-index: 11;
+    border-radius: 5px;
+    background-color: #fdf9ff;
+    -ms-flex-align: center;
+    display: none;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .aside .nav-toggler span {
+    height: 2px;
+    width: 18px;
+    display: inline-block;
+    position: relative;
+  }
+  .aside .nav-toggler.open span {
+    background-color: transparent;
+  }
+  .aside .nav-toggler span::before {
+    content: "";
+    height: 2px;
+    width: 18px;
+    position: absolute;
+    top: -6px;
+    left: 0;
+  }
+  .aside .nav-toggler.open span::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+  }
+  .aside .nav-toggler span::after {
+    content: "";
+    height: 2px;
+    width: 18px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
+  .aside .nav-toggler.open span::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+</style>
