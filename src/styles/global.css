@@ -1,18 +1,29 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
     --color-pt-white: #fdf9ff;
     --color-pt-white-g: #e8dfec;
+    --color-pt-white-bg: #f2f2fc;
     --color-pt-black-g: #302e4d;
-    --color-pt-red-primary: #ec1839;
+    --color-pt-gray-subtext: #504e70;
     --color-pt-gray-primary: #7d7d7d;
+    --color-pt-red-primary: #ec1839;
 }
 
-@layer components{
-    .logo-before{
+@layer components {
+    .logo-before {
         @apply before:content-[''] before:w-5 before:h-5 before:border-t-4 before:border-l-4 before:border-solid before:border-pt-red-primary before:absolute before:left-0 before:top-0;
     }
-    .logo-after{
+
+    .logo-after {
         @apply after:content-[''] after:w-5 after:h-5 after:border-b-4 after:border-r-4 after:border-solid after:border-pt-red-primary after:absolute after:right-0 after:bottom-0;
+    }
+
+    .title-before {
+        @apply before:content-[''] before:w-12 before:h-1 before:absolute before:left-0 before:top-full before:bg-pt-red-primary before:block;
+    }
+
+    .title-after {
+        @apply after:content-[''] after:w-6 after:h-1 after:absolute after:left-0 after:top-full after:mt-2 after:bg-pt-red-primary mt-2 after:block;
     }
 }
