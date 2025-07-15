@@ -1,0 +1,21 @@
+---
+type Props = {
+  title?: string;
+};
+
+const { title } = Astro.props;
+---
+
+<div class="portafolio-row">
+  <div
+    class="flex-grow-0 flex-shrink-0 basis-full max-w-full padd-15 mb-[60px]"
+  >
+    <h2
+      class="text-4xl relative font-bold text-pt-black-g title-before title-after"
+    >
+      {title}
+    </h2>
+  </div>
+</div>
+
+<style></style>

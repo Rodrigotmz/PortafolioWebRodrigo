@@ -1,5 +1,6 @@
 ---
 import PersonalInfo from '@/components/About/PersonalInfo.astro';
+import Title from '@/components/Title.astro';
 import BtnOption from '@/components/UI/BtnOption.astro';
 import Layout from '@/layouts/Layout.astro';
 import '@/styles/global.css';
@@ -8,17 +9,7 @@ import '@/styles/global.css';
 <Layout>
   <section class="about pt-[60px] pb-[70px]">
     <div class="w-full m-auto pl-52 pr-52">
-      <div class="portafolio-row">
-        <div
-          class="flex-grow-0 flex-shrink-0 basis-full max-w-full padd-15 mb-[60px]"
-        >
-          <h2
-            class="text-4xl relative font-bold text-pt-black-g title-before title-after"
-          >
-            Sobre mi
-          </h2>
-        </div>
-      </div>
+      <Title title="Sobre mi" />
       <div class="portafolio-row">
         <div class="about-content padd-15">
           <div class="portafolio-row mb-3">

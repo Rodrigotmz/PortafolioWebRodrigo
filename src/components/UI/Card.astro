@@ -1,0 +1,52 @@
+---
+import '@/styles/global.css';
+type Props = {
+  text?: string;
+};
+
+const { text } = Astro.props;
+---
+
+<section class="flex grow-0 shrink-0 basis-1/3 mb-8 padd-15">
+  <div
+    class="bg-pt-white border-[1px] border-solid border-pt-white-border inset-shadow-[0_0_5px_rgba(48,46,77,0.15)]
+    rounded-xl py-7 px-4 transition-all duration-300 ease-in-out w-full"
+  >
+    <div
+      class="block h-[60px] w-[60px] mx-auto mb-8 text-center transition-all duration-300 ease-in-out"
+    >
+      <i></i>
+    </div>
+    <h4 class="text-xl mb-4 font-bold text-pt-black-g capitalize text-center">
+      {text}
+    </h4>
+  </div>
+</section>
+
+<style>
+  .service-item .service-item-inner .icon {
+    /* height: 60px;
+    width: 60px; */
+    /* background-color: red; */
+    /* display: block; */
+    /* margin: 0 auto 30px; */
+    /* text-align: center; */
+    /* border-radius: 50%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; */
+  }
+  /* .service-item .service-item-inner h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #302e4d;
+    font-weight: 700;
+    text-transform: capitalize;
+  } */
+  .service-item .service-item-inner p {
+    /* font-size: 16px;
+    color: #504e70; */
+    /* line-height: 25px;
+    margin: 0; */
+    text-align: center;
+  }
+</style>

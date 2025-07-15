@@ -1,7 +1,15 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import Title from '@/components/Title.astro';
+import Layout from '@/layouts/Layout.astro';
 ---
 
-<Layout></Layout>
+<Layout>
+  <section class="about pt-[60px] pb-[70px]">
+    <div class="w-full m-auto pl-52 pr-52">
+      <Title title="Portafolio" />
+      <div class="portafolio-row"></div>
+    </div>
+  </section>
+</Layout>
 
 <style></style>
