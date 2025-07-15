@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "prettier-plugin-astro"
+        "prettier-plugin-astro",
+        "prettier-plugin-tailwindcss"
     ],
     "overrides": [
         {
@@ -18,5 +19,6 @@
     "bracketSpacing": true,
     "arrowParens": "always",
     "htmlWhitespaceSensitivity": "ignore",
-    "proseWrap": "always"
+    "proseWrap": "always",
+    "printWidth": 200
 }
