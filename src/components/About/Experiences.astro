@@ -1,0 +1,105 @@
+---
+import '@/styles/global.css';
+import Timeline from '@/components/UI/Timeline.astro';
+import { getCollection } from 'astro:content';
+
+const experiencia = (await getCollection('experiences'))[0].data;
+console.log(experiencia);
+---
+
+<section class="portafolio-row">
+  <div class="experience padd-15">
+    <h3 class="title">Experiencia</h3>
+    <div class="row">
+      <div class="timeline-box padd-15">
+        <div class="timeline shadow-dark">
+          {experiencia.map((item) => <Timeline empresa={item.empresa} fecha_inicio={item.fecha_inicio} fecha_fin={item.fecha_fin} puesto={item.puesto} responsabilidades={item.responsabilidades} />)}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .education {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .experience {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  h3.title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #302e4d;
+  }
+  .timeline-box {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .timeline {
+    background-color: #fdf9ff;
+    padding: 30px 15px;
+    border: 1px solid #d4d4e3;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 0px;
+  }
+  .timeline-item::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+  }
+  .circle-dot {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    height: 15px;
+    width: 15px;
+    left: 0px;
+    border-radius: 50%;
+  }
+  .timeline-date {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: #504e70;
+  }
+  .timeline-date .fa {
+    margin-right: 5px;
+  }
+  .timeline-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: #302e4d;
+  }
+  .timeline-text {
+    font-size: 16px;
+    line-height: 25px;
+    color: #504e70;
+    margin: 0;
+  }
+
+  .circle-dot,
+  .timeline-item::before {
+    background-color: #ec1839;
+  }
+</style>

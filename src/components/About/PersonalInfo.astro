@@ -3,42 +3,26 @@ import BtnOption from '@/components/UI/BtnOption.astro';
 import { getCollection } from 'astro:content';
 
 const perfil = (await getCollection('personalInfo'))[0].data;
-console.log(perfil);
 ---
 
-<section class="flex justify-start items-center flex-grow-0 flex-shrink-0 mt-4">
+<section class="mt-4 flex flex-shrink-0 flex-grow-0 items-center justify-start">
   <div
-    class="relative logo-before logo-after before:left-[-15px] before:top-[-15px] mt-2 before:w-10 before:h-10 before:rounded-tl-2xl after:right-[-15px] after:bottom-[-15px] after:w-10 after:h-10 after:rounded-br-2xl mr-[200px]"
+    class="logo-before logo-after relative mt-2 mr-[200px] before:top-[-15px] before:left-[-15px] before:h-10 before:w-10 before:rounded-tl-2xl after:right-[-15px] after:bottom-[-15px] after:h-10 after:w-10 after:rounded-br-2xl"
   >
-    <img
-      src="/src/assets/rodrigo.jpg"
-      alt="profile"
-      class="h-[400px] rounded-2xl"
-    />
+    <img src="/src/assets/rodrigo.jpg" alt="profile" class="h-[400px] rounded-2xl" />
   </div>
   <div class="ml-4">
     {
       Object.entries(perfil).map(([key, value]) => (
         <div>
-          <p class="text-[#302e4d] capitalize font-bold py-2.5 text-base border-b border-solid border-[#e8dfec]">
-            {key}:{' '}
-            <span
-              class={`font-semibold ml-1 text-[#302e4d] ${key === 'correo' ? 'lowercase' : ''}`}
-            >
-              {value}
-            </span>
+          <p class="border-b border-solid border-[#e8dfec] py-2.5 text-base font-bold text-[#302e4d] capitalize">
+            {key}: <span class={`ml-1 font-semibold text-[#302e4d] ${key === 'correo' ? 'lowercase' : ''}`}>{value}</span>
           </p>
         </div>
       ))
     }
     <div class="mt-6">
-      <BtnOption
-        text="Descargar CV"
-        href="/public/files/CV_Rodrigo_Tolentino_Martinez.pdf"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        download
-      />
+      <BtnOption text="Descargar CV" href="/public/files/CV_Rodrigo_Tolentino_Martinez.pdf" target="_blank" rel="noopener noreferrer nofollow" download />
       <BtnOption text="Contacto" href="/contact" />
     </div>
   </div>

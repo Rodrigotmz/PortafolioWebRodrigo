@@ -1,6 +1,6 @@
 ---
-import "@/styles/global.css";
-import Link from "../UI/Link.astro";
+import '@/styles/global.css';
+import Link from '../UI/Link.astro';
 
 type Links = {
   href: string;
@@ -9,17 +9,17 @@ type Links = {
 };
 
 const navLinks: Links[] = [
-  { href: "/", label: "Inicio", icon: "home" },
-  { href: "/about", label: "Sobre mi", icon: "user" },
-  { href: "/resume", label: "Resumen", icon: "resume" },
-  { href: "/portafolio", label: "Portafolio", icon: "computer" },
-  { href: "/contact", label: "Contacto", icon: "dotcom" }
+  { href: '/', label: 'Inicio', icon: 'home' },
+  { href: '/about', label: 'Sobre mi', icon: 'user' },
+  { href: '/resume', label: 'Tecnologías', icon: 'resume' },
+  { href: '/portafolio', label: 'Portafolio', icon: 'computer' },
+  { href: '/contact', label: 'Contacto', icon: 'dotcom' },
 ];
 ---
 
-<ul class="list-none p-0 my-20 mx-0">
+<ul class="mx-0 my-20 list-none p-0">
   {
-    navLinks.map(link => (
+    navLinks.map((link) => (
       <li class="block">
         <Link name={link.icon} href={link.href}>
           {link.label}

@@ -7,15 +7,27 @@ import Layout from '@/layouts/Layout.astro';
 <Layout>
   <section class="about pt-[60px] pb-[70px]">
     <div class="m-auto w-full pr-52 pl-52">
-      <Title title="Resumen" />
+      <Title title="Tecnologías" />
+      <Title title="Frontend" />
+      <div class="portafolio-row pb-10">
+        <Card text="JavaScript" iconName="javascript" color="from-black via-yellow-800 to-yellow-500" />
+        <Card text="TypeScript" iconName="typescript" color="from-blue-950 via-blue-800 to-blue-500" />
+        <Card text="React" iconName="react" color="from-cyan-900 via-cyan-700 to-cyan-500" />
+        <Card text="Angular" iconName="angular" color="from-purple-950 via-fuchsia-800 to-pink-500" />
+      </div>
+      <Title title="Backend" />
       <div class="portafolio-row pb-10">
         <Card text=".Net" iconName="dotnet" color="from-violet-900 via-fuchsia-700 to-pink-500" />
-        <Card text="Git" iconName="git" color="from-orange-950 via-orange-800 to-red-700" />
-        <Card text="React" iconName="react" color="from-cyan-900 via-cyan-700 to-cyan-500" />
-        <Card text="JavaScript" iconName="javascript" color="from-black via-yellow-800 to-yellow-500" />
-        <Card text="Angular" iconName="angular" color="from-purple-950 via-fuchsia-800 to-pink-500" />
+      </div>
+      <Title title="Base de datos" />
+      <div class="portafolio-row pb-10">
         <Card text="MySql" iconName="mysql" color="from-cyan-900 via-sky-800 to-cyan-600" />
-        <Card text="TypeScript" iconName="typescript" color="from-blue-950 via-blue-800 to-blue-500" />
+        <Card text="MS SQL Server" iconName="sqlserver" color="from-red-950 via-red-800 to-amber-500" />
+      </div>
+      <Title title="Control de versiones" />
+      <div class="portafolio-row pb-10">
+        <Card text="Git" iconName="git" color="from-orange-950 via-orange-800 to-red-700" />
+        <Card text="GitHub" iconName="github" color="from-emerald-900 via-teal-700 to-cyan-500" />
       </div>
     </div>
 

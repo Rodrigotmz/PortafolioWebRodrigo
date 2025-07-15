@@ -1,4 +1,5 @@
 ---
+import Experiences from '@/components/About/Experiences.astro';
 import PersonalInfo from '@/components/About/PersonalInfo.astro';
 import Title from '@/components/Title.astro';
 import BtnOption from '@/components/UI/BtnOption.astro';
@@ -8,34 +9,23 @@ import '@/styles/global.css';
 
 <Layout>
   <section class="about pt-[60px] pb-[70px]">
-    <div class="w-full m-auto pl-52 pr-52">
+    <div class="m-auto w-full pr-52 pl-52">
       <Title title="Sobre mi" />
       <div class="portafolio-row">
         <div class="about-content padd-15">
           <div class="portafolio-row mb-3">
-            <div
-              class="flex-grow-0 flex-shrink-0 basis-full max-w-full padd-15"
-            >
-              <h3 class="font-bold text-2xl text-pt-black-g">
-                Soy <span class="text-pt-red-primary">
-                  Rodrigo Tolentino Martínez
-                </span>
+            <div class="padd-15 max-w-full flex-shrink-0 flex-grow-0 basis-full">
+              <h3 class="text-pt-black-g text-2xl font-bold">
+                Soy <span class="text-pt-red-primary">Rodrigo Tolentino Martínez</span>
               </h3>
-              <p
-                class="text-base leading-6 text-pt-gray-subtext font-semibold mt-2"
-              >
-                Ingeniero en Tecnologías de la Información y Comunicaciones
-              </p>
+              <p class="text-pt-gray-subtext mt-2 text-base leading-6 font-semibold">Ingeniero en Tecnologías de la Información y Comunicaciones</p>
             </div>
           </div>
           <!-- Aquí inicia la información personal -->
-          <section
-            class="flex flex-col md:flex-row items-start justify-between"
-          >
+          <section class="flex flex-col items-start justify-between md:flex-row">
             <div class="w-full">
-              <!-- Contenido de la sección -->
               <PersonalInfo />
-              <!-- Botones de CV y contacto -->
+              <Experiences />
             </div>
           </section>
         </div>

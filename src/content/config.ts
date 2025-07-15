@@ -13,6 +13,18 @@ const personalInfoCollection = defineCollection({
     })
 });
 
+const experiencesCollection = defineCollection({
+    type: "data",
+    schema: z.array(z.object({
+        empresa: z.string(),
+        fecha_inicio: z.string(),
+        fecha_fin: z.string(),
+        puesto: z.string(),
+        responsabilidades: z.string()
+    }))
+})
+
 export const collections = {
-    personalInfo: personalInfoCollection
+    personalInfo: personalInfoCollection,
+    experiences: experiencesCollection
 };
