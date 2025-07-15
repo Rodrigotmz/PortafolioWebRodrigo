@@ -20,10 +20,18 @@
     }
 
     .title-before {
-        @apply before:content-[''] before:w-12 before:h-1 before:absolute before:left-0 before:top-full before:bg-pt-red-primary before:block;
+        @apply before:content-[''] before:w-12 before:h-1 before:absolute before:left-0 before:top-full before:bg-pt-red-primary before:mt-2;
     }
 
     .title-after {
-        @apply after:content-[''] after:w-6 after:h-1 after:absolute after:left-0 after:top-full after:mt-2 after:bg-pt-red-primary mt-2 after:block;
+        @apply after:content-[''] after:w-6 after:h-1 after:absolute after:left-0 after:top-full after:mt-4 after:bg-pt-red-primary after:block;
+    }
+
+    .portafolio-row {
+        @apply flex flex-wrap -ml-4 -mr-4 relative;
+    }
+
+    .padd-15 {
+        @apply pl-4 pr-4;
     }
 }
