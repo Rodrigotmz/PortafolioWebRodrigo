@@ -1,0 +1,19 @@
+---
+import '@/styles/global.css';
+type Props = {
+  text?: string;
+  href?: string;
+};
+
+const { text, href: hre } = Astro.props;
+---
+
+<a
+  href={hre}
+  class="inline-block rounded-[40px] text-white py-3 px-9 border-0
+    cursor-pointer text-base font-medium transition-all duration-300 ease-in-out hover:transform hover:scale-105 bg-pt-red-primary mr-2"
+>
+  {text}
+</a>
+
+<style></style>

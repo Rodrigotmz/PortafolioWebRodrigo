@@ -1,19 +1,19 @@
 ---
-import type { HTMLAttributes } from "astro/types";
 const { name, href, class: className, ...rest } = Astro.props;
 const { pathname } = Astro.url;
+import type { HTMLAttributes } from 'astro/types';
 
-type Props = HTMLAttributes<"a">;
+type Props = HTMLAttributes<'a'>;
 
 const Icon = await import(`../../assets/icons/${name}.svg`);
 const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href == "/" + subpath?.[0];
-console.log(isActive);
+const isActive = href === pathname || href == '/' + subpath?.[0];
+
 const svgProps = {
-  class: "icon",
+  class: 'icon',
   width: 24,
   height: 24,
-  ...rest
+  ...rest,
 };
 ---
 
@@ -22,6 +22,4 @@ const svgProps = {
   <slot />
 </a>
 
-<style>
-  
-</style>
+<style></style>
