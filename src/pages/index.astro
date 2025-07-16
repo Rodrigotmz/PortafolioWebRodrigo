@@ -1,50 +1,36 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Github from "@/assets/svg/github-icon.svg";
-import LinkedIn from "@/assets/svg/linkedin-icon.svg";
-import Instagram from "@/assets/svg/instagram-icon.svg";
+import Layout from '../layouts/Layout.astro';
+import Github from '@/assets/svg/github-icon.svg';
+import LinkedIn from '@/assets/svg/linkedin-icon.svg';
+import Instagram from '@/assets/svg/instagram-icon.svg';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <section class="flex min-h-screen">
-    <div class="max-w-[1100px] w-full m-auto">
+  <section class="text-white-primary flex min-h-screen">
+    <div class="m-auto w-full max-w-[1100px]">
       <div class="flex flex-col items-center justify-center gap-4.5">
-        <img
-          src="/src/assets/rodrigo.jpg"
-          alt="profile"
-          class="h-[200px] w-[200px] rounded-full block border-8 border-white shadow-[0_0_20px_rgba(48,46,77,0.15)]"
-        />
-        <h1 class="text-pt-black-g font-bold text-3xl">
-          Rodrigo Tolentino Martínez
-        </h1>
-        <p class="text-base font-semibold leading-6 text-pt-gray-subtext">
-          Ing. en Tecnologías de la Información y comunicaciones
-        </p>
+        <img src="/src/assets/rodrigo.jpg" alt="profile" class="block h-[200px] w-[200px] rounded-full border-8 border-white shadow-[0_0_20px_rgba(48,46,77,0.15)]" />
+        <h1 class="text-pt-black-g text-3xl font-bold">Rodrigo Tolentino Martínez</h1>
+        <p class="text-pt-gray-subtext text-base leading-6 font-semibold">Ing. en Tecnologías de la Información y comunicaciones</p>
         <div class="flex items-center justify-center gap-2">
           <a
-            class="transition-all duration-300 ease-in rounded-full text-center bg-white shadow-[0_0_20px_rgba(48,46,77,0.15)]"
+            class="rounded-full bg-white text-center shadow-[0_0_20px_rgba(48,46,77,0.15)] transition-all duration-300 ease-in"
             href="https://www.linkedin.com/in/rodrigo-tolentino-martinez"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            ><img src={LinkedIn.src} alt="LinkedIn" class="block w-full" />
+          >
+            <img src={LinkedIn.src} alt="LinkedIn" class="block w-full" />
           </a>
           <a
-            class="transition-all duration-300 ease-in rounded-full text-center bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-400 shadow-[0_0_20px_rgba(48,46,77,0.15)]"
+            class="rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-400 text-center shadow-[0_0_20px_rgba(48,46,77,0.15)] transition-all duration-300 ease-in"
             href="https://www.instagram.com/roderick.tm/"
           >
-            <img
-              src={Instagram.src}
-              alt="Instagram"
-              class="block w-full invert"
-            /></a
-          >
-          <a
-            class="transition-all duration-300 ease-in rounded-full text-center bg-black shadow-[0_0_20px_rgba(48,46,77,0.15)]"
-            href="https://github.com/Roderick1325"
-          >
+            <img src={Instagram.src} alt="Instagram" class="block w-full invert" />
+          </a>
+          <a class="rounded-full bg-black text-center shadow-[0_0_20px_rgba(48,46,77,0.15)] transition-all duration-300 ease-in" href="https://github.com/Roderick1325">
             <img src={Github.src} alt="Github" class="block w-full invert" />
           </a>
         </div>

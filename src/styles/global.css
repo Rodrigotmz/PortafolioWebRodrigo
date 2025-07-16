@@ -1,31 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-    --color-pt-white: #fdf9ff;
-    --color-pt-white-border: #d4d4e3;
-    --color-pt-white-g: #e8dfec;
-    --color-pt-white-bg: #f2f2fc;
-    --color-pt-black-g: #302e4d;
-    --color-pt-gray-subtext: #504e70;
-    --color-pt-gray-primary: #7d7d7d;
-    --color-pt-red-primary: #ec1839;
+    --color-white-primary: #fff;
+    --color-skyblue: #66b2ff;
+    --color-ice-blue: #aef8f2;
+    --color-aqua-glow: #16f4d0;
+    --color-aqua-glow-claro: #16f4d0;
+    --color-strong-blue: #0D47A1;
+    --color-vivid-blue: #1565C0;
+    --color-amber-glow: #FFC107;
+    --color-magenta-pulse: #E040FB;
+    --color-soft-orange: #FFA726;
+    --color-dark-slate: #1E1E2F;
+    --color-deep-navy: #0C1B3C;
 }
 
 @layer components {
     .logo-before {
-        @apply before:content-[''] before:w-5 before:h-5 before:border-t-4 before:border-l-4 before:border-solid before:border-pt-red-primary before:absolute before:left-0 before:top-0;
+        @apply before:content-[''] before:w-5 before:h-5 before:border-t-4 before:border-l-4 before:border-solid before:border-aqua-glow before:absolute before:left-0 before:top-0;
     }
 
     .logo-after {
-        @apply after:content-[''] after:w-5 after:h-5 after:border-b-4 after:border-r-4 after:border-solid after:border-pt-red-primary after:absolute after:right-0 after:bottom-0;
+        @apply after:content-[''] after:w-5 after:h-5 after:border-b-4 after:border-r-4 after:border-solid after:border-aqua-glow after:absolute after:right-0 after:bottom-0;
     }
 
     .title-before {
-        @apply before:content-[''] before:w-12 before:h-1 before:absolute before:left-0 before:top-full before:bg-pt-red-primary before:mt-2;
+        @apply before:content-[''] before:w-12 before:h-1 before:absolute before:left-0 before:top-full before:bg-aqua-glow before:mt-2;
     }
 
     .title-after {
-        @apply after:content-[''] after:w-6 after:h-1 after:absolute after:left-0 after:top-full after:mt-4 after:bg-pt-red-primary after:block;
+        @apply after:content-[''] after:w-6 after:h-1 after:absolute after:left-0 after:top-full after:mt-4 after:bg-aqua-glow after:block;
     }
 
     .portafolio-row {
@@ -34,5 +38,18 @@
 
     .padd-15 {
         @apply pl-4 pr-4;
+    }
+
+    .item {
+        @apply grow-0 shrink-0 basis-1/3 max-w-1/3 mb-8 flex;
+    }
+
+    .portafolio-background {
+        background: radial-gradient(79.43% 251.58% at 23.18% 73.07%, #0142a0 0, #0f133a 44.41%, #101034 56.43%, #141034 69.58%, #301436 100%, #411958 0);
+        background-repeat: no-repeat;
+    }
+
+    .shadow-dark {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     }
 }

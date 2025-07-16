@@ -7,11 +7,11 @@ const experiencia = (await getCollection('experiences'))[0].data;
 ---
 
 <section class="portafolio-row">
-  <div class="experience padd-15">
-    <h3 class="title">Experiencia</h3>
+  <div class="padd-15 mt-8 max-w-full shrink-0 grow-0 basis-full">
+    <h3 class="text-white-primary mb-8 text-2xl font-bold">Experiencia</h3>
     <div class="row">
-      <div class="timeline-box padd-15">
-        <div class="timeline shadow-dark">
+      <div class="padd-15 shrink-0 grow-0 basis-full">
+        <div class="shadow-dark border-white-primary/40 relative w-full rounded-xl border-[1px] border-solid px-4 py-8">
           {experiencia.map((item) => <Timeline empresa={item.empresa} fecha_inicio={item.fecha_inicio} fecha_fin={item.fecha_fin} puesto={item.puesto} responsabilidades={item.responsabilidades} />)}
         </div>
       </div>
@@ -20,27 +20,6 @@ const experiencia = (await getCollection('experiences'))[0].data;
 </section>
 
 <style>
-  .education {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-top: 30px;
-  }
-  .experience {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-top: 30px;
-  }
-  h3.title {
-    font-size: 24px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    color: #302e4d;
-  }
-  .timeline-box {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
   .timeline {
     background-color: #fdf9ff;
     padding: 30px 15px;
