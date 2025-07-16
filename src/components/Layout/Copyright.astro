@@ -2,9 +2,11 @@
 
 ---
 
-<div class="text-sm text-pt-gray-primary">
-  &copy; 2021 Portafolio Rodrigo Tolentino Martínez
+<div class="text-pt-gray-primary text-sm">
+  &copy; <span id="year"></span> Portafolio Rodrigo Tolentino Martínez
 </div>
 
-<style>
-</style>
+<script>
+  const labelYear = document.getElementById('year') as HTMLElement;
+  labelYear.textContent = new Date().getFullYear().toString();
+</script>

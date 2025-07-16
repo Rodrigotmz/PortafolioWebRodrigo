@@ -4,7 +4,6 @@ import Timeline from '@/components/UI/Timeline.astro';
 import { getCollection } from 'astro:content';
 
 const experiencia = (await getCollection('experiences'))[0].data;
-console.log(experiencia);
 ---
 
 <section class="portafolio-row">
