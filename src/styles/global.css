@@ -41,6 +41,7 @@
     --color-soft-orange: #FFA726;
     --color-dark-slate: #1E1E2F;
     --color-deep-navy: #0C1B3C;
+    --color-nav-overley: #000000a7;
 }
 
 @layer components {
