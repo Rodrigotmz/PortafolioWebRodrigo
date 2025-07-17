@@ -10,14 +10,48 @@ interface Props {
 const info = Astro.props;
 ---
 
-<div class="before:bg-aqua-glow-claro relative pb-12 pl-9 before:absolute before:top-0 before:left-[7px] before:h-full before:w-0.5 before:content-[''] last:pb-0">
-  <div class="bg-aqua-glow-claro absolute top-0 left-0 h-4 w-4 rounded-full"></div>
-  <h6 class="text-aqua-glow mb-3 text-sm font-semibold">
-    <i class="fa fa-calendar"></i>{info.fecha_inicio} - {info.fecha_fin}
-  </h6>
-  <h4 class="text-pt-black-g mb-2 text-xl font-bold capitalize">{info.empresa}</h4>
-  <h3 class="text-amber-glow mb-2 text-lg font-bold capitalize">{info.puesto}</h3>
-  <p class="text-pt-gray-subtext text-base leading-6">{info.responsabilidades}</p>
+<div class="relative pb-12 pl-10 before:absolute before:top-0 before:left-[9px] before:h-full before:w-0.5 before:bg-gradient-to-b before:from-cyan-400 before:to-purple-500 before:content-[''] last:pb-0 group">
+  <!-- Punto de la línea de tiempo con efecto de resplandor -->
+  <div class="absolute top-0 left-0 h-5 w-5 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 shadow-lg shadow-cyan-400/30 transition-all duration-300 group-hover:scale-125 group-hover:shadow-cyan-400/50">
+    <div class="absolute inset-0.5 rounded-full bg-gray-900"></div>
+  </div>
+  
+  <!-- Fechas -->
+  <div class="flex items-center mb-3">
+    <svg class="mr-2 h-4 w-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+    <span class="text-cyan-300 text-sm font-medium">
+      {info.fecha_inicio} - {info.fecha_fin}
+    </span>
+  </div>
+  
+  <!-- Empresa -->
+  <h4 class="text-white text-xl font-bold mb-1 group-hover:text-cyan-300 transition-colors">
+    {info.empresa}
+  </h4>
+  
+  <!-- Puesto -->
+  <h3 class="text-amber-300 text-lg font-semibold mb-3">
+    {info.puesto}
+  </h3>
+  
+  <!-- Responsabilidades -->
+  <p class="text-gray-300 text-base leading-relaxed">
+    {info.responsabilidades}
+  </p>
 </div>
 
-<style></style>
+<style>
+  /* Efecto de gradiente animado en la línea de tiempo */
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .group:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+  }
+</style>

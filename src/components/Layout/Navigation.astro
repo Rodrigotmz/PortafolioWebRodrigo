@@ -33,20 +33,28 @@ const navLinks: Links[] = [
   li a {
     font-size: 18px;
     font-weight: 700;
-    color: #aef8f2;
+    color: #67e8f9; /* cian-300 */
     text-decoration: none;
     line-height: 50px;
     display: flex;
     align-items: center;
-    padding-left: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     text-transform: capitalize;
+    background: rgba(8, 145, 178, 0.1); /* cian-600 con opacidad */
+    margin: 4px 0;
+    border-radius: 6px;
   }
   li a.active {
-    color: #16f4d0;
+    color: #34d399; /* emerald-400 */
+    background: rgba(16, 185, 129, 0.15); /* emerald-500 con opacidad */
+    border-left: 4px solid #34d399;
   }
   li a:not(.active):hover {
+    color: #ffffff;
+    background: rgba(8, 145, 178, 0.2); /* cian-600 con más opacidad */
+    transform: translateX(4px);
     transform: translateX(5px);
     color: #e040fb;
   }

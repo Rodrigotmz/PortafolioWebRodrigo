@@ -8,76 +8,24 @@ const experiencia = (await getCollection('experiences'))[0].data;
 
 <section class="portafolio-row">
   <div class="padd-15 mt-8 max-w-full shrink-0 grow-0 basis-full">
-    <h3 class="text-white-primary mb-8 text-2xl font-bold">Experiencia</h3>
+    <h3 class="text-cyan-300 mb-8 text-3xl font-bold">Experiencia</h3>
     <div class="row">
       <div class="padd-15 shrink-0 grow-0 basis-full">
-        <div class="shadow-dark border-white-primary/40 relative w-full rounded-xl border-[1px] border-solid px-4 py-8">
-          {experiencia.map((item) => <Timeline empresa={item.empresa} fecha_inicio={item.fecha_inicio} fecha_fin={item.fecha_fin} puesto={item.puesto} responsabilidades={item.responsabilidades} />)}
+        <div class="relative w-full rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 shadow-xl px-6 py-8">
+          <div>
+            {experiencia.map((item) => (
+              <Timeline 
+                empresa={item.empresa} 
+                fecha_inicio={item.fecha_inicio} 
+                fecha_fin={item.fecha_fin} 
+                puesto={item.puesto} 
+                responsabilidades={item.responsabilidades} 
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<style>
-  .timeline {
-    background-color: #fdf9ff;
-    padding: 30px 15px;
-    border: 1px solid #d4d4e3;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-  }
-  .timeline-item {
-    position: relative;
-    padding-left: 37px;
-    padding-bottom: 50px;
-  }
-  .timeline-item:last-child {
-    padding-bottom: 0px;
-  }
-  .timeline-item::before {
-    content: '';
-    width: 1px;
-    position: absolute;
-    height: 100%;
-    left: 7px;
-    top: 0;
-  }
-  .circle-dot {
-    position: absolute;
-    left: 0;
-    top: 0px;
-    height: 15px;
-    width: 15px;
-    left: 0px;
-    border-radius: 50%;
-  }
-  .timeline-date {
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 12px;
-    color: #504e70;
-  }
-  .timeline-date .fa {
-    margin-right: 5px;
-  }
-  .timeline-title {
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-transform: capitalize;
-    color: #302e4d;
-  }
-  .timeline-text {
-    font-size: 16px;
-    line-height: 25px;
-    color: #504e70;
-    margin: 0;
-  }
-
-  .circle-dot,
-  .timeline-item::before {
-    background-color: #ec1839;
-  }
-</style>

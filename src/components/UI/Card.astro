@@ -10,14 +10,14 @@ const { text, iconName, color } = Astro.props;
 const Icon = await import(`../../assets/skills/${iconName}.svg`);
 ---
 
-<section class="padd-15 mb-8 flex shrink-0 grow-0 basis-1/3">
+<section class="p-2 w-1/3 sm:w-1/4 md:w-1/4 lg:w-1/5 xl:w-1/6">
   <div
     class:list={[
-      'group relative flex min-h-[180px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br p-7 transition-all duration-300 ease-in-out hover:scale-105 hover:contrast-125',
+      'group relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br p-5 transition-all duration-300 ease-in-out hover:scale-105 hover:contrast-125',
       color,
     ]}
   >
-    <span class="z-10 block text-2xl font-bold text-white">{text}</span>
-    <Icon.default class="absolute -right-4 -bottom-4 size-36 rotate-10 rounded-2xl transition-transform group-hover:rotate-16" />
+    <span class="z-10 block text-center text-base font-bold text-white [text-shadow:_0_0_3px_rgb(0_0_0_/_80%)] sm:text-lg">{text}</span>
+    <Icon.default class="absolute -right-2 -bottom-2 size-28 rotate-10 opacity-80 transition-transform group-hover:rotate-12 sm:size-32" />
   </div>
 </section>

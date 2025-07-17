@@ -23,5 +23,18 @@
         ],
         "github": "https://github.com/Rodrigotmz/CriptoCoin-React",
         "imagen": ""
+    },
+    {
+        "nombre": "Portafolio web",
+        "descripcion": "Portafolio web creado con Astro.",
+        "fecha": "14 de julio de 2025",
+        "tecnologias": [
+            "Astro",
+            "Html",
+            "Tailwind CSS",
+            "JavaScript"
+        ],
+        "github": "",
+        "imagen": ""
     }
 ]

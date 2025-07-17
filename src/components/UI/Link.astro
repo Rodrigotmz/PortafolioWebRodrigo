@@ -22,4 +22,37 @@ const svgProps = {
   <slot />
 </a>
 
-<style></style>
+<style>
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #67e8f9; /* cian-300 */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  a:hover {
+    color: #ffffff;
+    background: rgba(8, 145, 178, 0.1); /* cian-600 con opacidad */
+  }
+  
+  a.active {
+    color: #34d399; /* emerald-400 */
+    font-weight: 600;
+  }
+  
+  a .icon {
+    transition: transform 0.2s ease;
+  }
+  
+  a:hover .icon {
+    transform: scale(1.1);
+  }
+  
+  a.active .icon {
+    color: #34d399; /* emerald-400 */
+  }
+</style>
