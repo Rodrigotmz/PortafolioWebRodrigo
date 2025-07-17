@@ -2,36 +2,32 @@
 
 ---
 
-<div class="fixed top-2 left-4 z-30 h-10 w-10 md:hidden" id="navToggler">
-  <div class="menu-icon block invert"></div>
+<div class="fixed top-3 left-3 z-30 h-14 md:hidden" id="navToggler">
+  <div class="nav_hamburger invert"></div>
 </div>
 
 <style>
-  .menu-icon {
+  .nav_hamburger {
+    width: 30px;
+    height: 50%;
     background-image: url('/src/assets/svg/hamburger.svg');
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    transition: background-image 0.3s;
-  }
-  .close {
-    background-image: url('/src/assets/svg/close.svg');
-    background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 100%;
+    cursor: pointer;
+    transition: background-image 0.3s;
+    aspect-ratio: 1 / 1;
+  }
+  .nav_hamburger_open {
+    background-image: url('/src/assets/svg/close.svg');
   }
 </style>
 
 <script>
-  let isOpen = false;
   const btnMenu = document.getElementById('navToggler') as HTMLElement;
   const NavMenu = document.getElementById('nav') as HTMLElement;
-  const iconMenu = document.querySelector('.menu-icon') as HTMLElement;
+  const iconMenu = document.querySelector('.nav_hamburger') as HTMLElement;
   btnMenu?.addEventListener('click', () => {
-    iconMenu?.classList.toggle('close');
+    iconMenu?.classList.toggle('nav_hamburger_open');
     NavMenu?.classList.toggle('w-full');
   });
 </script>
