@@ -5,10 +5,11 @@ import Nav from '@/components/Layout/Navigation.astro';
 import Copyright from '@/components/Layout/Copyright.astro';
 ---
 
-<header class="fixed top-0 left-0 z-10 h-full w-full sm:w-[270px] overflow-y-auto 
-                border-r border-white/10 shadow-[4px_0_12px_-2px_rgba(0,0,0,0.4)] 
-                transition-all duration-300 ease-in bg-nav-overley sm:bg-transparent">
-  <div class="absolute top-0 left-0 h-full sm:w-full overflow-y-hidden p-8 w-1/2 sm:bg-transparent bg-[#1e1e2f]">
+<header
+  class="bg-nav-overley fixed top-0 left-0 z-10 h-full overflow-y-auto border-r border-white/10 shadow-[4px_0_12px_-2px_rgba(0,0,0,0.4)] transition-all duration-300 ease-in sm:w-[270px] sm:bg-transparent"
+  id="nav"
+>
+  <div class="absolute top-0 left-0 h-full w-1/2 overflow-y-hidden bg-[#1e1e2f] p-8 sm:w-full sm:bg-transparent">
     <Logo />
     <Nav />
     <Copyright />

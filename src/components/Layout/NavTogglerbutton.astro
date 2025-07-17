@@ -2,22 +2,22 @@
 
 ---
 
-<div class="w-10 h-10 fixed z-30 left-4 top-2 md:hidden" id="navToggler">
+<div class="fixed top-2 left-4 z-30 h-10 w-10 md:hidden" id="navToggler">
   <div class="menu-icon block invert"></div>
 </div>
 
 <style>
   .menu-icon {
-   background-image: url("/src/assets/svg/hamburger.svg"); 
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   width: 100%;
-   height: 100%;
-   transition: background-image .3s;
+    background-image: url('/src/assets/svg/hamburger.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transition: background-image 0.3s;
   }
   .close {
-    background-image: url("/src/assets/svg/close.svg"); 
+    background-image: url('/src/assets/svg/close.svg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -26,10 +26,12 @@
 </style>
 
 <script>
-    const btnMenu = document.getElementById('navToggler');
-    const iconMenu = document.querySelector('.menu-icon');
-    btnMenu?.addEventListener('click', ()=>{
-      iconMenu?.classList.toggle('close');
-    });
+  let isOpen = false;
+  const btnMenu = document.getElementById('navToggler') as HTMLElement;
+  const NavMenu = document.getElementById('nav') as HTMLElement;
+  const iconMenu = document.querySelector('.menu-icon') as HTMLElement;
+  btnMenu?.addEventListener('click', () => {
+    iconMenu?.classList.toggle('close');
+    NavMenu?.classList.toggle('w-full');
+  });
 </script>
-
