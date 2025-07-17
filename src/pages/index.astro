@@ -3,55 +3,284 @@ import Layout from '../layouts/Layout.astro';
 import Github from '@/assets/svg/github-icon.svg';
 import LinkedIn from '@/assets/svg/linkedin-icon.svg';
 import Instagram from '@/assets/svg/instagram-icon.svg';
+import SocialLink from '@/components/UI/SocialLink.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <section class="text-white-primary flex min-h-screen">
-    <div class="m-auto w-full max-w-[1100px]">
-      <div class="flex flex-col items-center justify-center gap-4.5">
-        <img src="/src/assets/rodrigo.jpg" alt="profile" class="block h-[200px] w-[200px] rounded-full border-8 border-white shadow-[0_0_20px_rgba(48,46,77,0.15)]" />
-        <h1 class="text-pt-black-g text-3xl font-bold">Rodrigo Tolentino Martínez</h1>
-        <p class="text-pt-gray-subtext text-base leading-6 font-semibold">Ing. en Tecnologías de la Información y comunicaciones</p>
-        <div class="flex items-center justify-center gap-2">
-          <a
-            class="rounded-full bg-white text-center shadow-[0_0_20px_rgba(48,46,77,0.15)] transition-all duration-300 ease-in"
-            href="https://www.linkedin.com/in/rodrigo-tolentino-martinez"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-          >
-            <img src={LinkedIn.src} alt="LinkedIn" class="block w-full" />
-          </a>
-          <a
-            class="rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-400 text-center shadow-[0_0_20px_rgba(48,46,77,0.15)] transition-all duration-300 ease-in"
-            href="https://www.instagram.com/roderick.tm/"
-          >
-            <img src={Instagram.src} alt="Instagram" class="block w-full invert" />
-          </a>
-          <a class="rounded-full bg-black text-center shadow-[0_0_20px_rgba(48,46,77,0.15)] transition-all duration-300 ease-in" href="https://github.com/Roderick1325">
-            <img src={Github.src} alt="Github" class="block w-full invert" />
-          </a>
+  <section class="main-banner flex h-full items-center">
+    <!-- grid container  -->
+    <div class="container mx-auto h-full w-full px-8">
+      <div class="grid-conatiner">
+        <!-- banner-container -->
+        <div class="content">
+          <!-- titulo -->
+          <h1 class="title s-center">
+            <span class="line-1">Rodrigo Tolentino Martinez</span>
+            <br />
+            <span class="line-2">Desarrollador fullstack</span>
+          </h1>
+          <!-- Descripción -->
+          <p class="description s-center">
+            Desarrollador web con experiencia en el desarrollo de aplicaciones web y móviles. Conocimientos en HTML, CSS, JavaScript, React, C#. Y frameworks como React, Angular, .Net, Tailwind, Astro. 
+          </p>
+          <p>
+            Disponible para contratar como freelancer o para trabajar en proyectos de desarrollo web.
+          </p>
+          <!-- Seccion de redes sociales -->
+          <div class="mt-8 flex items-center justify-center gap-4">
+            <SocialLink href="https://www.linkedin.com/in/rodrigo-tolentino-martinez" src={LinkedIn.src} alt="LinkedIn" class="bg-white shadow-lg hover:scale-110 hover:shadow-2xl" />
+            <SocialLink
+              href="https://www.instagram.com/roderick.tm/"
+              src={Instagram.src}
+              alt="Instagram"
+              class="bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-400 shadow-lg hover:scale-110 hover:shadow-2xl [&_img]:invert"
+            />
+            <SocialLink href="https://github.com/Rodrigotmz" src={Github.src} alt="GitHub" class="bg-gray-900 shadow-lg hover:scale-110 hover:shadow-2xl [&_img]:invert" />
+          </div>
+        </div>
+        <!-- grafico -->
+        <div class="graphic">
+          <img src="img/tech-man.png" alt="man" class="graphic-man" />
+          <img src="img/go-icon.png" alt="man" class="graphic-go absolute" />
+          <div class="graphic-circles absolute">
+            <img src="img/power-circle-1.png" alt="graphic-circle-1" class="graphic-circle-1 absolute" />
+            <img src="img/power-circle-2.png" alt="graphic-circle-2" class="graphic-circle-2 absolute" />
+            <img src="img/banner-circle.png" alt="graphic-circle-2" class="graphic-energy absolute" />
+          </div>
         </div>
       </div>
     </div>
-  </section>
-</Layout>
 
-<style>
-  div a {
-    display: block;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    line-height: 35px;
-    color: #fff;
-    margin-left: 4px;
-    margin-right: 4px;
-  }
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Orbitron:wght@400..900&display=swap');
+      .s-center {
+        text-align: center;
+      }
 
-  div a:hover {
-    transform: scale(1.1);
-  }
-</style>
+      .flex {
+        display: flex;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .s-center {
+          text-align: left;
+        }
+      }
+      .main-banner {
+        background: radial-gradient(79.43% 251.58% at 23.18% 73.07%, #0142a0 0, #0f133a 44.41%, #101034 56.43%, #141034 69.58%, #301436 100%, #411958 0);
+        color: white;
+        padding: 2rem 1rem;
+        margin: 0 -2rem; /* Compensa el padding del main */
+        width: calc(100% + 4rem); /* Ajusta el ancho para compensar los márgenes */
+        min-height: 100%;
+        box-sizing: border-box;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .grid-conatiner {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          max-width: 1200px;
+          margin: 0 auto;
+          align-items: center;
+          height: 100%;
+        }
+      }
+
+      /* Titulo y descripcion */
+      .title {
+        font-family: Orbitron, sans-serif;
+        font-size: 1.5rem;
+      }
+
+      .line-2 {
+        color: #16f4d0;
+      }
+
+      .description {
+        font-size: 0.8rem;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .title {
+          font-size: 2.5rem;
+        }
+
+        .description {
+          font-size: 1rem;
+        }
+      }
+
+      /* Fin: titulo y descripcion */
+      /* Inicio: countdown */
+      .countdown {
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .countdown {
+          justify-content: flex-start;
+        }
+      }
+
+      .countdown-item {
+        padding: 0 0.75rem;
+        align-items: center;
+        position: relative;
+      }
+
+      .countdown-item:not(:last-of-type)::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 50%;
+        background-color: #fff;
+        opacity: 0.5;
+      }
+
+      .countdown-number {
+        font-size: 1.7em;
+        font-weight: bold;
+        margin-right: 0.25rem;
+        color: #dfa6f9;
+      }
+
+      .countdown-letter {
+        opacity: 0.5;
+      }
+
+      /* Fin: countdown */
+
+      /* Inicio: Formulario */
+      .form-container {
+        height: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .form {
+        display: inline-flex;
+      }
+
+      .input {
+        line-height: 2.5rem;
+        width: 15rem;
+        background: none;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 0 0.5rem;
+        border-radius: 0.25rem 0 0 0.25rem;
+      }
+
+      .input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .button {
+        padding: 0 1rem;
+        border-radius: 0 0.25rem 0.25rem 0;
+        border: none;
+        color: #2d83fc;
+        font-weight: 600;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .button:hover {
+        transform: scale(1.05);
+      }
+
+      .form-hint {
+        font-size: 0.7rem;
+        margin: 1rem 0;
+      }
+
+      /* Fin: Formulario */
+      .graphic {
+        position: relative;
+        display: grid;
+        padding-top: 3rem;
+        grid-template-columns: 1fr 75%;
+      }
+
+      .graphic-man {
+        width: 100%;
+        grid-column-start: 2;
+      }
+
+      .absolute {
+        position: absolute;
+      }
+
+      .graphic-go {
+        position: absolute;
+        width: 25%;
+        mix-blend-mode: screen;
+        top: -4%;
+        right: -2%;
+      }
+
+      .graphic-circles {
+        height: 100%;
+        aspect-ratio: 1/1;
+      }
+
+      .graphic-circles img {
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: screen;
+      }
+
+      .graphic-energy {
+        animation: turn1 10s linear infinite;
+      }
+
+      .graphic-circle-1 {
+        animation: turn2 16s linear infinite;
+      }
+
+      .graphic-circle-2 {
+        animation: turn1 26s linear infinite;
+      }
+
+      @keyframes turn1 {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+
+      @keyframes turn2 {
+        to {
+          transform: rotate(-1turn);
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .graphic-go {
+          top: 2%;
+          right: -3%;
+        }
+      }
+
+      @media screen and (max-width: 760px) {
+        .graphic-go {
+          top: -1%;
+          right: -3%;
+        }
+      }
+
+      @media screen and (max-width: 430px) {
+        .graphic-go {
+          top: 7%;
+          right: -3%;
+        }
+      }
+    </style>
+  </section></Layout
+>

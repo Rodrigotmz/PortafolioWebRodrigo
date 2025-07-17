@@ -1,0 +1,30 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = {
+  href: string;
+  src: string;
+  alt: string;
+  class?: string;
+};
+
+const { href, src, alt, class: className } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer nofollow"
+  class:list={[
+    'inline-flex items-center justify-center w-10 h-10 p-2 rounded-full transition-all duration-300',
+    className
+  ]}
+>
+  <img 
+    src={src} 
+    alt={alt} 
+    width="24" 
+    height="24"
+    class="w-full h-auto"
+    loading="lazy"
+  />
+</a>

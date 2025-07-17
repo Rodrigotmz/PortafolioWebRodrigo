@@ -1,5 +1,33 @@
 @import "tailwindcss";
 
+/* Personalización de la barra de desplazamiento */
+/* Para navegadores WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 47, 0.1); /* color-dark-slate con opacidad */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #16f4d0; /* color-aqua-glow */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0fc7a9; /* Un tono más oscuro para el hover */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #16f4d0 rgba(30, 30, 47, 0.1);
+}
+
 @theme {
     --color-white-primary: #fff;
     --color-skyblue: #66b2ff;
