@@ -2,6 +2,9 @@
 import Title from '@/components/Title.astro';
 import CardProyect from '@/components/UI/CardProyect.astro';
 import Layout from '@/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const proyects = (await getCollection('proyects'))[0].data;
 ---
 
 <Layout>
@@ -10,7 +13,13 @@ import Layout from '@/layouts/Layout.astro';
       <Title title="Portafolio" />
       <div class="portafolio-row">
         <!-- Blog Item -->
-        <CardProyect />
+        {
+          proyects.map((proyect) => (
+            <CardProyect nombre={proyect.nombre} descripcion={proyect.descripcion} 
+            fecha={proyect.fecha} tecnologias={proyect.tecnologias} 
+            github={proyect.github} imagen={proyect.imagen}/>
+          ))
+        }
         <!-- Blog Item End -->
       </div>
     </div>
