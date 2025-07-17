@@ -14,37 +14,18 @@ const props = Astro.props;
 ---
 
 <div class="item padd-15">
-  <!-- <div class="shadow-dark bg-deep-navy w-full overflow-hidden rounded-xl border-[1px] border-solid border-[#d4d4e3]">
-    <div class="relative overflow-hidden">
-      <img src={imgS.src} alt="blog" class="block w-full transition-all duration-500 ease-in hover:scale-105" />
-      <div class="absolute bottom-3.5 left-3.5 px-2.5 py-1 text-base font-semibold">13 dic 2020</div>
-    </div>
-    <div class="px-3.5 py-5">
-      <h4 class="text-aqua-glow mb-2.5 text-xl font-bold capitalize">CRUD Angular con .Net</h4>
-      <p class="text-white-primary mb-3.5 text-base leading-6 font-normal">
-        CRUD realizado en Angular (frontend) y .NetCore 3.1 (Backend), realzinado las operaciones de Create, Read, Update, Delete.
-      </p>
-      <div class="grid-auto-efe mb-3.5 flex cursor-default flex-wrap gap-4 max-lg:gap-1">
-        <Tag text="Html" />
-        <Tag text="JavaScript" />
-        <Tag text="CSS" />
-        <Tag text="Angular" />
-      </div>
-      <p class="font-semibold text-amber-50 no-underline">Github : <a href="https://github.com/Roderick1325/CRUD-angular" target="_blank" class="text-aqua-glow-claro">Ver</a></p>
-    </div>
-  </div> -->
   <article
-    class="group flex h-full cursor-pointer flex-col items-center justify-start gap-4 overflow-hidden 
-    rounded-3xl bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 p-4 backdrop-blur-lg transition-all duration-200 ease-in-out 
-    before:absolute before:bottom-50 before:left-7/12 before:-z-1 before:aspect-square before:size-36 
-    before:rounded-full before:bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0,rgba(255,255,255,0.05)_100%)] 
-    before:opacity-5 before:blur-3xl before:transition after:absolute after:top-1/2 
-    after:-left-10 after:-z-1 after:aspect-square after:size-40 after:rounded-full 
-    after:bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0,rgba(255,255,255,0.05)_100%)] 
-    after:opacity-10 after:blur-3xl after:transition hover:shadow-[0_10px_10px_rgba(0,0,0,0.05)] 
-    max-md:p-6 xl:before:-bottom-0 dark:border-0 dark:before:bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0,rgba(255,255,255,0.05)_100%)] 
-    dark:before:opacity-20 dark:before:blur-3xl dark:after:bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0,rgba(255,255,255,0.05)_100%)] 
-    dark:after:opacity-20 dark:after:blur-2xl dark:hover:shadow-[0_10px_10px_rgba(0,0,0,0.05)]"
+    class="group flex h-full cursor-pointer flex-col items-center justify-start gap-4 overflow-hidden
+  rounded-3xl bg-gradient-to-br from-blue-800 via-indigo-900 to-purple-900 p-4 backdrop-blur-lg transition-all duration-200 ease-in-out
+  before:absolute before:bottom-50 before:left-7/12 before:-z-1 before:aspect-square before:size-36
+  before:rounded-full before:bg-[radial-gradient(circle,rgba(192,132,252,0.15)_0,rgba(99,102,241,0.08)_100%)]
+  before:opacity-5 before:blur-3xl before:transition after:absolute after:top-1/2
+  after:-left-10 after:-z-1 after:aspect-square after:size-40 after:rounded-full
+  after:bg-[radial-gradient(circle,rgba(99,102,241,0.15)_0,rgba(192,132,252,0.08)_100%)]
+  after:opacity-10 after:blur-3xl after:transition hover:shadow-[0_10px_10px_rgba(0,0,0,0.05)]
+  max-md:p-6 xl:before:-bottom-0 dark:border-0 dark:before:bg-[radial-gradient(circle,rgba(192,132,252,0.15)_0,rgba(99,102,241,0.08)_100%)]
+  dark:before:opacity-20 dark:before:blur-3xl dark:after:bg-[radial-gradient(circle,rgba(99,102,241,0.15)_0,rgba(192,132,252,0.08)_100%)]
+  dark:after:opacity-20 dark:after:blur-2xl dark:hover:shadow-[0_10px_10px_rgba(13,188,130,0.05)]"
   >
     <div class="overflow-hidden rounded-xl">
       <img class="h-auto rounded-xl transition-all duration-300 ease-in-out group-hover:scale-105" src={props.imagen} alt={props.nombre} />
