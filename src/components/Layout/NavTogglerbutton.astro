@@ -2,7 +2,7 @@
 
 ---
 
-<div class="w-10 h-10 fixed z-30 left-4 top-2 md:hidden" >
+<div class="w-10 h-10 fixed z-30 left-4 top-2 md:hidden" id="navToggler">
   <div class="menu-icon block invert"></div>
 </div>
 
@@ -26,9 +26,10 @@
 </style>
 
 <script>
-    const NavMenu = document.querySelector('.menu-icon');
-    NavMenu?.addEventListener('click', ()=>{
-      NavMenu.classList.toggle('close');
+    const btnMenu = document.getElementById('navToggler');
+    const iconMenu = document.querySelector('.menu-icon');
+    btnMenu?.addEventListener('click', ()=>{
+      iconMenu?.classList.toggle('close');
     });
 </script>
 
