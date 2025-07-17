@@ -1,5 +1,6 @@
 ---
 import Header from '@/components/Layout/Header.astro';
+import NavTogglerbutton from '@/components/Layout/NavTogglerbutton.astro';
 import { ClientRouter } from 'astro:transitions';
 ---
 
@@ -14,8 +15,13 @@ import { ClientRouter } from 'astro:transitions';
     <ClientRouter />
   </head>
   <body>
+    <NavTogglerbutton />
     <Header />
-    <main class="fixed top-0 right-0 bottom-0 left-[270px] z-0 block min-h-screen overflow-x-hidden overflow-y-auto bg-transparent px-8 py-0 transition-all duration-300 ease-in-out">
+    <main class="fixed top-0 right-0 bottom-0 left-[270px] z-0 
+    block min-h-screen overflow-x-hidden 
+    overflow-y-auto bg-transparent px-8 py-0 
+    transition-all duration-300 ease-in-out">
+    
       <slot />
     </main>
     <div class="portafolio-background absolute -z-10 h-full w-full"></div>
