@@ -1,56 +1,51 @@
 ---
 import '@/styles/global.css';
 import Tag from './Tag.astro';
-interface Props{
+
+interface Props {
   nombre: string;
   descripcion: string;
   fecha: string;
   tecnologias: string[];
   github: string;
   imagen: string;
-};
+}
 
 const props = Astro.props;
 ---
 
-<div class="item padd-15">
+<div class="p-2 w-full">
   <article
-    class="group flex h-full cursor-pointer flex-col items-center justify-start gap-4 overflow-hidden
-  rounded-3xl bg-gradient-to-br from-blue-800 via-indigo-900 to-purple-900 p-4 backdrop-blur-lg transition-all duration-200 ease-in-out
-  before:absolute before:bottom-50 before:left-7/12 before:-z-1 before:aspect-square before:size-36
-  before:rounded-full before:bg-[radial-gradient(circle,rgba(192,132,252,0.15)_0,rgba(99,102,241,0.08)_100%)]
-  before:opacity-5 before:blur-3xl before:transition after:absolute after:top-1/2
-  after:-left-10 after:-z-1 after:aspect-square after:size-40 after:rounded-full
-  after:bg-[radial-gradient(circle,rgba(99,102,241,0.15)_0,rgba(192,132,252,0.08)_100%)]
-  after:opacity-10 after:blur-3xl after:transition hover:shadow-[0_10px_10px_rgba(0,0,0,0.05)]
-  max-md:p-6 xl:before:-bottom-0 dark:border-0 dark:before:bg-[radial-gradient(circle,rgba(192,132,252,0.15)_0,rgba(99,102,241,0.08)_100%)]
-  dark:before:opacity-20 dark:before:blur-3xl dark:after:bg-[radial-gradient(circle,rgba(99,102,241,0.15)_0,rgba(192,132,252,0.08)_100%)]
-  dark:after:opacity-20 dark:after:blur-2xl dark:hover:shadow-[0_10px_10px_rgba(13,188,130,0.05)]"
+    class="group flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-blue-800 via-indigo-900 to-purple-900 p-4 backdrop-blur-lg transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-lg"
   >
     <div class="overflow-hidden rounded-xl">
-      <img class="h-auto rounded-xl transition-all duration-300 ease-in-out group-hover:scale-105" src={props.imagen} alt={props.nombre} />
+      <img
+        class="h-auto w-full rounded-xl object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+        src={props.imagen}
+        alt={props.nombre}
+        loading="lazy"
+      />
     </div>
-    <div class="flex flex-col p-2 h-full">
-      <div class="flex flex-col gap-3 flex-grow">
-        <h2 class="text-3xl font-bold text-white">{props.nombre}</h2>
-        <div class="flex flex-wrap gap-3">
-          {
-            props.tecnologias.map((tecnologia) => (
-              <Tag text={tecnologia} />
-            ))
-          }
-        </div>
-        <p class="my-2 w-full text-lg leading-6 font-medium max-xl:text-base max-md:max-w-[85%] dark:text-gray-200">
-          {props.descripcion}
-        </p>
+    <div class="flex flex-col mt-4 flex-grow">
+      <h2 class="text-2xl font-bold text-white sm:text-3xl">{props.nombre}</h2>
+      <div class="flex flex-wrap gap-2 mt-2">
+        {props.tecnologias.map((tecnologia) => (
+          <Tag text={tecnologia} />
+        ))}
       </div>
-      <div class="mt-auto pt-4">
-        <a href={props.github} class="inline-block text-white font-bold text-xl hover:text-indigo-300 transition-colors">
-          Ver Proyecto
-        </a>
-      </div>
+      <p class="mt-3 text-base leading-relaxed font-medium text-gray-200 max-w-full sm:max-w-[90%]">
+        {props.descripcion}
+      </p>
+    </div>
+    <div class="mt-4">
+      <a
+        href={props.github}
+        class="inline-block text-white font-semibold text-lg hover:text-indigo-300 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver Proyecto
+      </a>
     </div>
   </article>
 </div>
-
-<style></style>
