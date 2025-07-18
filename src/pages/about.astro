@@ -8,22 +8,22 @@ import '@/styles/global.css';
 ---
 
 <Layout>
-  <section class="about text-white-primary pt-[60px] pb-[70px]">
-    <div class="m-auto w-full pr-52 pl-52">
+  <section class="text-white-primary min-h-[100svh] pt-[60px] pb-[70px] w-full">
+    <div class="mx-auto w-full px-4 sm:px-10 md:px-20 lg:px-52">
       <Title title="Sobre mi" />
       <div class="portafolio-row">
-        <div class="about-content padd-15">
+        <div class="padd-15">
           <div class="portafolio-row mb-3">
-            <div class="padd-15 max-w-full flex-shrink-0 flex-grow-0 basis-full">
-              <h3 class="text-pt-black-g text-2xl font-bold">
+            <div class="padd-15 w-full flex-shrink-0 flex-grow-0 basis-full">
+              <h3 class="text-xl font-bold sm:text-2xl">
                 Soy <span class="text-aqua-glow-claro">Rodrigo Tolentino Martínez</span>
               </h3>
-              <p class="text-pt-gray-subtext mt-2 text-base leading-6 font-semibold">Ingeniero en Tecnologías de la Información y Comunicaciones</p>
+              <p class="text-pt-gray-subtext mt-2 text-sm leading-5 font-semibold sm:text-base sm:leading-6">Ingeniero en Tecnologías de la Información y Comunicaciones</p>
             </div>
           </div>
           <!-- Aquí inicia la información personal -->
-          <section class="flex flex-col items-start justify-between md:flex-row">
-            <div class="w-full">
+          <section class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <div class="w-full h-full">
               <PersonalInfo />
               <Experiences />
             </div>
@@ -35,3 +35,15 @@ import '@/styles/global.css';
 </Layout>
 
 <style></style>
+<script>
+  const section = document.querySelector('section') as HTMLElement;
+  function checkWidth() {
+    if (window.innerWidth > 640) {
+      section.classList.remove('portafolio-background');
+    } else {
+      section.classList.add('portafolio-background');
+    }
+  }
+  checkWidth();
+  window.addEventListener('resize', checkWidth);
+</script>

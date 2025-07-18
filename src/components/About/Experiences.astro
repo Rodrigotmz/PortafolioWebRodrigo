@@ -7,12 +7,15 @@ const experiencia = (await getCollection('experiences'))[0].data;
 ---
 
 <section class="portafolio-row">
-  <div class="padd-15 mt-8 max-w-full shrink-0 grow-0 basis-full">
-    <h3 class="text-cyan-300 mb-8 text-3xl font-bold">Experiencia</h3>
+  <div class="padd-15 mt-8 w-full shrink-0 grow-0 basis-full px-4 sm:px-6 md:px-8">
+    <h3 class="text-cyan-300 mb-6 text-2xl sm:text-3xl font-bold text-center sm:text-left">
+      Experiencia
+    </h3>
+
     <div class="row">
-      <div class="padd-15 shrink-0 grow-0 basis-full">
-        <div class="relative w-full rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 shadow-xl px-6 py-8">
-          <div>
+      <div class="padd-15 w-full">
+        <div class="relative w-full rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 shadow-xl px-4 py-6 sm:px-6 sm:py-8">
+          <div class="space-y-6">
             {experiencia.map((item) => (
               <Timeline 
                 empresa={item.empresa} 
@@ -28,4 +31,5 @@ const experiencia = (await getCollection('experiences'))[0].data;
     </div>
   </div>
 </section>
+
 
