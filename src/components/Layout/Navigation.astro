@@ -17,7 +17,7 @@ const navLinks: Links[] = [
 ];
 ---
 
-<ul class="mx-0 my-20 list-none p-0">
+<ul class="mx-0 list-none p-4 sm:my-20 sm:p-0">
   {
     navLinks.map((link) => (
       <li class="block">
@@ -31,33 +31,65 @@ const navLinks: Links[] = [
 
 <style>
   li a {
-    font-size: 18px;
+    font-size: .75rem;
     font-weight: 700;
     color: #67e8f9; /* cian-300 */
     text-decoration: none;
-    line-height: 50px;
+    line-height: 3rem;
     display: flex;
     align-items: center;
-    padding-left: 16px;
+    padding-left: 1em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     text-transform: capitalize;
     background: rgba(8, 145, 178, 0.1); /* cian-600 con opacidad */
-    margin: 4px 0;
-    border-radius: 6px;
+    margin: .25em 0;
+    border-radius: .25rem;
   }
   li a.active {
-    color: #34d399; /* emerald-400 */
-    background: rgba(16, 185, 129, 0.15); /* emerald-500 con opacidad */
-    border-left: 4px solid #34d399;
-  }
-  li a:not(.active):hover {
-  color: #ffffff;
-  background: rgba(224, 64, 251, 0.15);
-  transform: translateX(5px);
-  border-left: 4px solid #e040fb;
-}
-  svg {
-    margin-right: 10px;
+      color: #34d399; /* emerald-400 */
+      background: rgba(16, 185, 129, 0.15); /* emerald-500 con opacidad */
+      border-left: .25em solid #34d399;
+    }
+    li a:not(.active):hover {
+      color: #ffffff;
+      background: rgba(224, 64, 251, 0.15);
+      transform: translateX(5px);
+      border-left: .25em solid #e040fb;
+    }
+    svg {
+      margin-right: .5em;
+    }
+  @media screen and (min-width: 1024px) {
+    li a {
+      font-size: 18px;
+      font-weight: 700;
+      color: #67e8f9; /* cian-300 */
+      text-decoration: none;
+      line-height: 50px;
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      text-transform: capitalize;
+      background: rgba(8, 145, 178, 0.1); /* cian-600 con opacidad */
+      margin: 4px 0;
+      border-radius: 6px;
+    }
+    li a.active {
+      color: #34d399; /* emerald-400 */
+      background: rgba(16, 185, 129, 0.15); /* emerald-500 con opacidad */
+      border-left: 4px solid #34d399;
+    }
+    li a:not(.active):hover {
+      color: #ffffff;
+      background: rgba(224, 64, 251, 0.15);
+      transform: translateX(5px);
+      border-left: 4px solid #e040fb;
+    }
+    svg {
+      margin-right: 10px;
+    }
   }
 </style>
