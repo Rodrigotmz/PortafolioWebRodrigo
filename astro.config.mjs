@@ -1,16 +1,23 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
-import react from '@astrojs/react';
+import react from "@astrojs/react";
+
+import db from "@astrojs/db";
+
+import vercel from "@astrojs/vercel";
+
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
-
-  integrations: [react()]
+  integrations: [react(), db(), sitemap()],
+  adapter: vercel(),
+  site: "https://jonathanbello.com",
 });

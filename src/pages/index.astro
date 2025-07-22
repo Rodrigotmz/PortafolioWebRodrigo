@@ -1,8 +1,9 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
+export const prerender = true
+import HomePage from "@components/pages/HomePage.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
-<BaseLayout>
-	<h1>Hola</h1>
+<BaseLayout title="Inicio">
+  <HomePage />
 </BaseLayout>
